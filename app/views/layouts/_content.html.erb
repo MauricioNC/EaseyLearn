@@ -1,5 +1,5 @@
 <div class="cards-container">
-  <div class="card-deck row gap-3">
+  <div class="card-deck row gap-3 container-fluid">
     <% @videos.each do |v|%>
       <% if v.user_id == @current_user.id%>
         <div class="card col-md-3 col-sm-12 p-0">
