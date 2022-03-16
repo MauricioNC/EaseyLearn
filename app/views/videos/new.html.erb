@@ -1,0 +1,30 @@
+<%= render "layouts/menu"%>
+
+<div class="wrapper">
+  <%= form_for @video do |f| %>
+    <%= f.text_field :link, class: "rounded"%>
+    <%= f.label :category, "Choose one category for the video", class: "text-white"%>
+    <%=
+      select_tag(
+        :category,
+        options_for_select(
+          @categories.map{ |c| [c.name, c.id] }
+        ),
+        class: "rounded p-1"
+      ) 
+    %>
+    <%= f.submit "Upload", class: "rounded"%>
+  <% end %>
+
+  <% if flash[:notice] %>
+    <div class="notice text-success fw-bolder">
+    <%= flash[:notice] %>
+    </div>
+  <% end %>
+  
+  <% if flash[:alert] %>
+    <div class="alert text-danger fw-bolder">
+    <%= flash[:alert] %>
+    </div>
+  <% end %>
+</div>

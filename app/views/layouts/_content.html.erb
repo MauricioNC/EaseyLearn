@@ -1,0 +1,22 @@
+<div class="cards-container">
+  <div class="card-deck row gap-3">
+    <% @videos.each do |v|%>
+      <% if v.user_id == @current_user.id%>
+        <div class="card col-md-3 col-sm-12 p-0">
+        <iframe src="https://www.youtube.com/embed/<%= v.link %>" title="<%= v.title %>" frameborder="0"></iframe>
+        <div class="card-body">
+          <h5 class="card-title"><%= v.title %></h5>
+          <p class="card-text description"><%= v.description %></p>
+          <%= link_to "Take class", "#", class: "btn" %>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <span class="material-icons icon-profile">account_circle</span>
+            <span class="owner-name"><%= v.user.name%></span>
+          </small>
+        </div>
+      </div>
+      <%end%>
+    <% end%>
+  </div>
+</div>

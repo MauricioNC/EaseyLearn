@@ -1,0 +1,52 @@
+<script>
+function hide(clas) {
+  var x = document.getElementsByClassName(clas);
+  for (let i=0;i<x.length;i++){
+    if (x[i].style.display === "none") {
+    x[i].style.display = "flex";
+    } else {
+    x[i].style.display = "none";
+    }
+  }
+}
+</script>
+<%= render "layouts/menu"%>
+<div class="results d-flex align-items-center flex-column ">
+  <h2 class="fw-normal">Resultados para la busqueda "<%=params[:query]%>"</h2>
+  <h4 class="fw-normal">Videos encontrados: <%=@video.length%><button onclick="hide('video')" class = "btn button m-2">ocultar</button></h4>
+  <h4 class="fw-normal ">Eventos encontrados: <%=@event.length%><button onclick="hide('event')" class = "btn button m-2">ocultar</button></h4>
+</div>
+
+<div class="container-fluid search-container">
+  
+  <div class="card">
+    <% @video.each do |v|%>
+          <div class="row g-0 video">
+            <div class="col-sm-6 col-md-6 col-xl-4 m-10">
+              <iframe src="https://www.youtube.com/embed/<%= v.link %>" title="<%= v.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-8">
+              <div class="card-body">
+                <h5 class="card-title"><%= v.title %></h5>
+                <p class="card-text description-text"><%= v.description %></p>
+                <%= link_to "Take class", "/player", class: "btn" %>
+              </div>
+            </div>
+          </div>
+    <% end%>
+    <% @event.each do |e|%>
+          <div class="row g-0 event">
+            <div class="col-sm-6 col-md-6 col-xl-4 m-10 d-flex justify-content-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/1535/1535005.png" height=200rem title="<%= e.title %>">
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-8">
+              <div class="card-body">
+                <h5 class="card-title"><%= e.title %></h5>
+                <p class="card-text description-text"><%= e.description %></p>
+                <%= link_to "Start Meeting", e.link, class: "btn" %>
+              </div>
+            </div>
+          </div>
+    <% end%>
+  </div>
+</div>

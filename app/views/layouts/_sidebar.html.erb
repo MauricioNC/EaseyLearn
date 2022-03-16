@@ -1,0 +1,22 @@
+<div class="col-12 col-md-3">
+        <div class="aside-profile d-flex align-items-center">
+          <div class="aside-picture mr-3">
+            <img src="https://as1.ftcdn.net/v2/jpg/04/53/08/58/1000_F_453085847_F79K4TPRlcDp9XGLPpAbjuKG2WPG3GAe.jpg" class="img-fluid aside-img" alt="User">
+          </div>
+          <div class="aside__text  ">
+            <p class="m-0 pb-2">User:</p>
+            <p><%= @current_user.name%></p>
+          </div>
+        </div>
+        <div class="aside-helpers">
+          <div class="aside-helpers-buttons">
+            <i class="fas fa-cog"></i>
+            <%= link_to "Settings",edit_path, class: "aside-helpers-buttons_text text-white" %>
+          </div>
+          <div class="aside-helpers-buttons">
+            <i class="fas fa-play"></i> 
+            <%= link_to "My content",content_path, class: "aside-helpers-buttons_text text-white" %>
+          </div>
+        </div>
+      </div>
+      

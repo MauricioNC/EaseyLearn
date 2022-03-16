@@ -1,0 +1,35 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 48px);
+  justify-content: flex-start;
+  width: 100vw;
+}
+
+.wrapper form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin-top: 40px;
+  padding: 8px;
+}
+
+.wrapper form input[type="text"],
+.wrapper form select {
+  border: none;
+  width: 100%;
+}
+
+.wrapper form input {
+  margin: 15px
+}
+
+.wrapper form input[type="submit"] {
+  background-color: #F78528;
+  border: none;
+  color: #FFF;
+  outline: none;
+  padding: 3px 8px;
+}

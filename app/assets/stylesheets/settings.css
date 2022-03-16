@@ -1,0 +1,118 @@
+:root{
+  --bg-primary: #282828;
+  --bg-secundary: #212129;
+
+}
+
+.main-content {
+  border-top: 1px solid orange;
+  background-color: var(--bg-primary);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  height: 99.3vh;
+  width: 100%;
+}
+
+.aside-profile {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 4rem;
+  padding-left: 1rem;
+}
+
+.aside-picture {
+  width: 35%;
+}
+
+.aside-img {
+  border-radius: 100px;
+}
+
+.aside-helpers {
+  margin: 0 auto;
+  padding-top: 6rem;
+  width: 59%;
+}
+
+.aside-helpers-buttons {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  transition: all .1s ease-in-out;
+}
+
+.aside-helpers-buttons:hover {
+  color: #858585;
+  transform: scale(1.01);
+}
+
+.aside-helpers-buttons_icon, .aside-helpers-buttons_text, .aside-helpers-buttons_text-minor {
+  margin: 0;
+  padding: 0;
+}
+
+.aside-helpers-buttons_text-minor { 
+  font-size: 1.35rem; 
+}
+
+.form-main {
+  background-color: var(--bg-secundary);
+}
+
+.form-title {
+  border-bottom: 1px solid orange;
+  margin-bottom: 7rem;
+}
+
+.form-content {
+  align-items: center;
+  display: flex;
+  gap: 5rem;
+}
+
+.form-content-profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.form-content-profile_img {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.button {
+  color: white;
+  background-color: #F78528;
+  padding: 5px 30px;
+  transition: all .2s ease-in-out;
+}
+
+.button:hover {
+  color: white ;
+  background-color: darkorange;
+  transform: scale(1.01);
+  text-decoration: none;
+}
+
+.form-content-group {
+  color: white ;
+  width: 500px;
+}
+
+.form-control {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.indata {
+  background-color:transparent; 
+  border:none ;	
+  border-bottom: solid rgba(247, 133, 40, 1) ;
+  color: white;
+  width: 30rem;
+ }

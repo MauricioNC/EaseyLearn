@@ -1,0 +1,78 @@
+.login_card_title{
+	font-family: Script MT;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0em;
+	line-height: 77px;
+	text-align: center;
+}
+
+.login_img{
+	height: 90px;
+}
+
+.login_input{
+	background-color:transparent !important;
+	border-bottom: solid rgba(247, 133, 40, 1)!important;
+	border:none !important;
+	color: white !important;
+	margin-bottom: 1.5rem;
+} 
+
+.login_label{
+	color: rgba(247, 133, 40, 1);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 450;
+	line-height: 17px;
+}
+
+.login_button{
+	background-color: rgba(247, 133, 40, 1)!important;
+	border-radius: 15px!important;
+	font: 94px;
+	height: 59px;
+	width: 289px;
+} 
+
+
+.login_span{
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 750;
+	letter-spacing: 0.08em;
+	line-height: 29px;
+}
+
+.login_a{
+	color: rgba(247, 133, 40, 1);
+	text-decoration: none;   
+}
+
+.login_card{
+	background-color: rgba(228, 228, 228, 0.07) !important;
+}
+
+.text-divider {
+	--text-divider-gap: 1rem;
+	align-items: center;
+	display: flex;
+	margin: 2rem 0 2rem 0;
+}
+	
+.text-divider::before,
+.text-divider::after {
+	background-color: silver;
+	content: '';
+	flex-grow: 1;
+	height: 1px;
+}
+	
+.text-divider::before {
+	margin-right: var(--text-divider-gap);
+}
+	
+.text-divider::after {
+	margin-left: var(--text-divider-gap);
+}

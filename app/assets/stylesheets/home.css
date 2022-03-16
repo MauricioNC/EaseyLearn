@@ -1,0 +1,83 @@
+body {
+  background-color: #212129;
+}
+/* NAVBAR STYLES */
+
+.navbar {
+  background-color: #282828;
+  border-bottom: 1px solid #F78528;
+  padding: 0 50px;
+}
+
+.navbar .collapse form .form-control{
+  background-color: #212129;
+  border: none;
+  color: rgb(163, 163, 163);
+  padding: 4px 15px;
+  width: 330px;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.navbar .collapse form .search-icon { 
+  color: #F78528;
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.navbar .collapse form .btn-search {
+  border: none;
+  padding: 0;
+  position: relative;
+  right: 2.6rem;
+  width: 30px;
+}
+
+.navbar .collapse form .btn-search:hover {
+  background-color: transparent;
+}
+
+/* CATEGORIES BAR STYLES */
+
+.categories {
+  background-color: #282828;
+  padding: 7px;
+}
+
+/* BANNER STYLES */
+
+.banner {
+  background-color: #2d2d33;
+  box-shadow: 6px 0px 10px 3px rgba(31, 31, 31, 0.473);
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+.banner .row {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+}
+
+.banner .banner-text {
+  color: #fff; text-align: center;
+}
+
+.banner .banner-text h1 {
+  font-size: 3rem;
+}
+
+.banner .banner-text h3 {
+  font-weight: 300;
+}
+
+@supports(object-fit: cover){
+  .banner-img img{
+    object-fit: contain;
+    object-position: center center;
+    width: 70%;
+  }
+}

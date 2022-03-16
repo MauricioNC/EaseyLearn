@@ -1,0 +1,62 @@
+.cards-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 60px;
+}
+
+.cards-container > .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card-deck .card {
+  background-color: #282828;
+  border: 0px solid #FFF;
+  box-shadow: 4px 4px 15px 1px rgb(31, 31, 31);
+  width: 24%;
+}
+
+.card > iframe {
+  height: 270px;
+  width: 100%;
+}
+
+.card-body {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body .card-title,
+  .card-body .card-text {
+  color: #e0e0e0
+}
+
+.card-body .description {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400px;
+}
+
+.card-body .btn { background-color: #F78528; }
+
+.card .card-footer small {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.card .card-footer .icon-profile {
+  font-size: 3rem;
+  margin-right: 1.5rem;
+}
+
+.card .card-footer .owner-name {
+  font-size: 1.3rem;
+  font-weight: 200;
+}

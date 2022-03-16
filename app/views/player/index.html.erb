@@ -1,0 +1,85 @@
+<%= render "layouts/menu"%>
+
+<div class="container-fluid row g-0 mt-5 player-wrapper">
+	
+	<!-- VIDEO PLAYER CONTAINER -->
+	
+	<div class="col-sm-12 col-md-12 col-lg-9">
+		<% @videoPlayer.each do |vp|%>
+			<div class="video d-flex flex-column justify-content-center">
+				<iframe src="https://www.youtube.com/embed/<%= vp.link %>" title="<%= vp.title %>" allowfullscreen frameborder="0" class="mx-auto"></iframe>
+				<div class="meta-data mx-auto text-white">
+					<div class="card rounded-0 shadow-none border-0">
+						<div class="card-body">
+							<h4 class="card-title"><%= vp.title %></h4>
+							<h5 class="card-subtitle mb-2 text-muted">
+								<div class="author d-flex justify-content-center align-items-center">
+									<span class="material-icons">account_circle</span>
+									<%= vp.user.name %>
+								</div>
+							</h5>
+						</div>
+						<div class="card-footer text-end">
+							<span class="publish-date">Published at: <%= vp.created_at.to_date %></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+
+	<!-- IMPORTANT EVENTS -->
+
+	<div class="col-sm-12 col-md-12 col-lg-3">
+		<div class="events">
+			<% @events.each do |e| %>
+				<div class="row">
+					<div class="col-sm-6 col-md-12 mx-auto mb-3">
+						<div class="card bg-dark">
+							<div class="card-body">
+								<h5 class="card-title"><%= e.title %></h5>
+								<p class="card-text"><%= e.description %></p>
+								<%= link_to "Go to the event", e.link, target: '_blank', class: 'text-decoration-none btn text-white fw-bold' %>
+							</div>
+							<div class="card-footer">
+								By: 
+								<% @eventAuthor.each do |ea| %>
+									<% if e.user_id === ea.id %>
+										<%= ea.name %>
+										<% break %>
+									<% end %>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+</div>
+
+<!-- RELATED CONTENT TO SEE -->
+
+	<div class="col-sm-6 col-md-12 col-lg-12">
+		<div class="related-content">
+			<h1 class="mx-5">Other content that may interest you</h1>
+			<div class="card-deck row gap-4 d-flex justify-content-center">
+				<% @videoRelated.each do |vr|%>
+					<div class="card col-sm-12 col-lg-12 p-0">
+						<iframe src="https://www.youtube.com/embed/<%= vr.link %>" title="<%= vr.title %>" frameborder="0"></iframe>
+						<div class="card-body">
+							<h5 class="card-title"><%= vr.title %></h5>
+							<p class="card-text description"><%= vr.description %></p>
+							<%= link_to "Take class", { controller: "player", v_title: vr.title }, class: "btn" %>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								<span class="material-icons icon-profile">account_circle</span>
+								<span class="owner-name">Mauricio Navarro</span>
+							</small>
+						</div>
+					</div>
+				<% end%>
+		</div>
+	</div>

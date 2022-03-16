@@ -1,0 +1,94 @@
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.player-wrapper {
+  margin-bottom: 6rem;
+}
+
+.player-wrapper > div {
+  padding: 10px;
+}
+
+.player-wrapper .video {
+  width: 100%;
+}
+
+.player-wrapper .video iframe {
+  height: 44rem;
+  width: 80%;
+}
+
+.player-wrapper .video .meta-data {
+  background-color: rgba(26, 26, 26, 0.781);
+  margin-top: 10px;
+  width: 80%;
+}
+
+.player-wrapper div .meta-data .card {
+  background-color: transparent;
+}
+
+.player-wrapper div .meta-data .card .card-body{
+  padding: 15px;
+}
+
+.player-wrapper div .meta-data .card .card-body .author span{
+  font-size: 3.5rem;
+  margin-right: 10px;
+}
+
+.player-wrapper div .meta-data .card .card-footer {
+  width: 100%;
+}
+
+.player-wrapper .events {
+  border-left: 1px solid rgba(88, 90, 92, 0.568);
+}
+
+.player-wrapper div .meta-data .card .card-footer,
+.player-wrapper .events .card .card-footer {
+  border-top: 1px solid rgba(65, 68, 73, 0.568);
+  color: rgb(114, 114, 114);
+}
+
+.player-wrapper .events {
+  max-height: 55rem;
+  overflow-y: visible;
+  overflow: hidden;
+}
+
+.player-wrapper .events::-webkit-scrollbar {
+  width: 0px;
+}
+
+.player-wrapper .events:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.player-wrapper .events::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.player-wrapper .events::-webkit-scrollbar-thumb {
+  background-color: #F78528;
+}
+
+
+.player-wrapper .events .card {
+  border: 1px solid rgba(65, 68, 73, 0.568);
+  width: 100%;
+}
+
+.related-content h1 {
+  border-bottom: 1px solid #F78528;
+  color: rgb(198, 198, 201);
+  margin-bottom: 5rem;
+  padding-bottom: 15px;
+  width: 50%;
+}
+
+.card-deck .card {
+  width: 22.8%;
+}

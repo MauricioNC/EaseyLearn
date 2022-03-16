@@ -1,0 +1,63 @@
+<tbody>
+
+    <tr>
+      <% @events.each do |event|%>
+      <th scope="row" class="text-center">
+      <%= event.title%>
+      </th>
+      <td class="text-center" ><%= event.description%></td>
+      <td class="text-center" ><%= event.category.name%></td>
+      <td class="text-center"><%= event.day%></td>
+      <td class="text-center"><%= event.hour%></td>
+      <td class="text-center"><a href="<%= event.link%>"><%= event.link%></a></td>
+      <td class="text-center">
+        <button type="button" id="" data-toggle="modal" data-target="#editEvent<%= event.id %>" class="btn btn-success">
+          <%= render "edit_icon"%>
+        </button>
+        <form method="post" action="/delete_event" class="btn">
+          <input type="hidden" name ="id" value="<%= event.id %>" id ="id" class="form-control" placeholder="privateNumber" method="post" action="/delete_event">
+          <button type="submit" class="btn btn-danger">
+            <%= render "delete_icon"%>
+          </button>
+        </form>
+      </td>
+    </tr>
+    <div class="modal" id="editEvent<%= event.id %>" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark">Add event</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          <%= form_for event do |f| %>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :title, placeholder: "title", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :description, placeholder: "description", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :day, placeholder: "day", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :hour, placeholder: "hour", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :link, placeholder: "link", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+            </div>
+            <div class="form-group">
+              <%= f.submit  onClick: "window.location.reload();", class: "form-control" %>
+						</div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>  
+  </tbody>
