@@ -29,7 +29,7 @@ function hide(clas) {
               <div class="card-body">
                 <h5 class="card-title"><%= v.title %></h5>
                 <p class="card-text description-text"><%= v.description %></p>
-                <%= link_to "Take class", "/player", class: "btn" %>
+                <%= link_to "Take class", { controller: "player", v_title: v.title }, class: "btn" %>
               </div>
             </div>
           </div>
