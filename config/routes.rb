@@ -20,7 +20,8 @@ Rails.application.routes.draw do
 
   resources :events
   
-  get '/events', to: "events#index"
+  get '/my-events', to: "events#index"
+  get '/show_events', to: "events#show_events"
   post 'delete_event', to: "events#delete"
 
   get "player/watch", to: "player#index"

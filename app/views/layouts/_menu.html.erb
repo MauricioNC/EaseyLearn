@@ -14,11 +14,13 @@
             
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#"><span class="material-icons">insert_invitation</span></a>
+          <%= link_to "/show_events", class: "nav-link text-white" do%>
+            <span class="material-icons">insert_invitation</span>
+          <% end %>
         </li>
     
         <li class="nav-item">
-          <a class="nav-link text-white" href="/events">MyEvents</a>
+          <%= link_to "My events", "/my-events", class: "nav-link text-white" %>
         </li>
 
         <li class="nav-item">

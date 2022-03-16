@@ -1,15 +1,3 @@
-<script>
-function hide(clas) {
-  var x = document.getElementsByClassName(clas);
-  for (let i=0;i<x.length;i++){
-    if (x[i].style.display === "none") {
-    x[i].style.display = "flex";
-    } else {
-    x[i].style.display = "none";
-    }
-  }
-}
-</script>
 <%= render "layouts/menu"%>
 <div class="results d-flex align-items-center flex-column ">
   <h2 class="fw-normal">Resultados para la busqueda "<%=params[:query]%>"</h2>
@@ -18,7 +6,6 @@ function hide(clas) {
 </div>
 
 <div class="container-fluid search-container">
-  
   <div class="card">
     <% @video.each do |v|%>
           <div class="row g-0 video">

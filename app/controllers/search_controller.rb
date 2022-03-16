@@ -4,4 +4,7 @@ class SearchController < ApplicationController
     @event = Event.where(['title LIKE ?', "%#{(params[:query])}%"])
     @video = Video.where(['title LIKE ?', "%#{(params[:query])}%"])
   end
+  
+  def show_events
+  end
 end

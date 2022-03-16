@@ -1,0 +1,20 @@
+<%= render "layouts/menu"%>
+
+<div class="container-fluid row">
+  <div class="col-sm-12 col-md-6 col-lg-6 mx-auto mt-5 events">
+    <% Event.all.each do |e|%>
+      <div class="row g-0 event bg-dark m-3 shadow-lg">
+        <div class="col-sm-6 col-md-6 col-xl-4 m-10 d-flex justify-content-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/1535/1535005.png" height=200rem title="<%= e.title %>">
+        </div>
+        <div class="col-sm-6 col-md-6 col-xl-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= e.title %></h5>
+            <p class="card-text description-text"><%= e.description %></p>
+            <%= link_to "Start Meeting", e.link, class: "btn" %>
+          </div>
+        </div>
+      </div>
+    <% end%>
+  </div>
+</div>
